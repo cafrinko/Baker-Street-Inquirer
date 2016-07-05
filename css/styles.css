@@ -2,7 +2,7 @@
 
 body {
   font-family: "Book Antiqua", "Palatino Linotype", Georgia, serif;
-  text-shadow:   1px 1px 1px #ffffff;
+  text-shadow: 1px 1px 1px #ffffff;
   background-color: #e4e4e4;
 }
 
@@ -32,23 +32,15 @@ h6 {
   letter-spacing: 1px;
 }
 
+li {
+  list-style: none;
+  text-align: center;
+}
+
 .background {
   background: url("../img/rag.png") repeat-x;
   margin-bottom: 1em;
 
-}
-
-.logo {
-  height: 279px;
-  width: 28%;
-  min-width: 279px;
-  text-align: center;
-  position: relative;
-  border: 2px solid tomato;
-}
-
-.relativeLogo {
-  max-height: 100%;
 }
 
 .absoluteLogo {
@@ -92,12 +84,20 @@ h6 {
 
 /*Media Queries*/
 
-@media only screen and (max-width: 399px) {
-  .sherlock, .watson, .mycroft, .moriarty, .adler, .winter {
-    width: 40%;
+@media only screen and (max-width: 430px) {
+  .vicvill {
+    min-width: 40%;
     float: left;
-    margin-right: 1em;
+    margin-right: 0.5em;
     margin-bottom: 1em;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  h6 {
+    font-size: 9px;
   }
 
   .relativeLogo {
@@ -116,13 +116,21 @@ h6 {
   }
 }
 
-@media only screen and (max-width: 599px) {
-  .sherlock, .watson, .mycroft, .moriarty, .adler, .winter {
+@media only screen and (min-width: 431px) {
+  .vicvill {
     width: 30%;
     float: left;
     margin-right: 1em;
     margin-bottom: 1em;
   }
+
+  /*.logo, nav {
+    float: left;
+  }*/
+
+  /*.vicvill:nth-child(3n) {
+    margin-right: 0;
+  }*/
 
   .relativeLogo {
     display: none;
@@ -137,5 +145,88 @@ h6 {
     transform: translateY(-25%);
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .vicvill {
+    min-width: 30%;
+    float: left;
+    margin-right: 3.5%;
+    margin-bottom: 1em;
+  }
+
+  .winter, .mycroft {
+    margin-right: 0;
+  }
+
+  .ppl {
+    /*position: relative;*/
+  }
+
+  .people {
+    border: 2px solid cyan;
+    margin: 0;
+    padding: 0;
+    /*position: absolute;*/
+    /*left: 50%;*/
+  }
+
+  main {
+    border: 2px solid lightblue;
+    max-width: 70%;
+    display: block;
+    float: right;
+    /*position: absolute;
+    left: 310px;*/
+  }
+
+  .logo {
+    border: 2px solid teal;
+    height: 279px;
+    width: 28%;
+    min-width: 279px;
+    display: block;
+    float: left;
+    /*text-align: center;*/
+    /*position: absolute;*/
+    left: 0;
+    top: 0;
+    transform: translateY(0);
+    transform: translateX(0);
+    border: 2px solid tomato;
+  }
+
+  nav {
+    position: absolute;
+    top: 350px;
+    left: -15px;
+    list-style: none;
+    width: 28%;
+  }
+
+  .absoluteLogo {
+    position: absolute;
+    z-index: 100;
+    top: 39%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid orange;
+    margin: 0;
+    padding: 0;
+  }
+
+  .relativeLogo {
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+  }
+
+  .wrapper {
+    border: 2px solid purple;
+    position: relative;
   }
 }
